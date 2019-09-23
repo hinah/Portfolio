@@ -3,4 +3,6 @@ layout: misc
 title: About
 ---
 
-Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused publishing platform for your publication site or blog. You can find everything you need to get started under documentation. For more information on how to install and use this theme, check out [the documentation]({{ site.github.url }}{% post_url 2016-10-10-getting-started %}).
+Hi there! I’m Hina, UX & UI designer from Manchester.
+
+I’m a multidisciplinary designer focused on building connected products, services, and interactive experiences. I’ve had the pleasure of working with many talented people alongside some incredible companies – including EE, Pretty little thing, BooHoo.com, JD Sport, and a few others. More importantly, I’m passionate about creating meaningful work of enduring value – work that makes an unforgettable contribution to people’s lives, big or small.
