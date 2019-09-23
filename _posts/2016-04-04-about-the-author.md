@@ -4,7 +4,7 @@ title: "About the Author"
 author: "Paul Le"
 categories: facts
 tags: [sample]
-image: cuba-4.jpg
+image: Me.jpg
 ---
 
 Hi there! I'm Hina, UX & UI designer from Manchester.
