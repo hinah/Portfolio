@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "About the Author"
-author: "Paul Le"
+title: "About the designer"
+author: "Hina H"
 categories: facts
 tags: [sample]
-image: cuba-4.jpg
+image: Me.jpg
 ---
 
-Hi there! I'm Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Check out [my personal website](https://www.lenpaul.com/) for more information on my other projects (including more Jekyll themes!), as well as some of my writing.
+Hi there! I'm Hina, UX & UI designer from Manchester.
+
+I'm a multidisciplinary designer focused on building connected products, services, and interactive experiences. I've had the pleasure of working with many talented people alongside some incredible companies – including EE, Pretty little thing, BooHoo.com, JD Sport, and a few others. More importantly, I’m passionate about creating meaningful work of enduring value – work that makes an unforgettable contribution to people’s lives, big or small.
