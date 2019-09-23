@@ -1,47 +1,56 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
-    {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
-    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-    {% if page.author %}
-      {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
-    {% endif %}
-    {% include open-graph.html %}
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+layout: base
+---
 
-    <link href="{{ site.url }}/atom.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Atom Feed">
-    <link href="{{ site.url }}/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+{% assign strings = site.data.strings %}
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
+<article class="page" role="article">
+  <header>
+    <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
+    {% include components/message.html text=page.description hide=page.hide_description %}
+  </header>
 
-    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
-    <!-- HTML5 Shiv and Media Query Support for IE -->
-    <!--[if lt IE 9]>
-      <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>
-      <script src="{{ site.url }}/js/vendor/respond.min.js"></script>
-    <![endif]-->
+  {{ content }}
 
-  </head>
+  <hr class="dingbat"/>
 
-  <body id="js-body">
-    {% include browser-upgrade.html %}
-    {% include header.html %}
-    {% include navigation-sliding.html %}
+  {% if site.posts.size > 0 %}
+    <h2 class="hr">{{ strings.posts | default:"Posts" }}</h2>
+    <ul class="related-posts">
+      {% for post in site.posts limit:5 %}
+        {% include components/post-list-item.html post=post %}
+      {% endfor %}
+    </ul>
+  {% endif %}
 
-    <div id="page-wrapper">
-      {{ content }}
-      {% include footer.html %}
-    </div>
-
-    <script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="{{ site.url }}/js/main.js"></script>
-
-  </body>
-
-</html>
+  {% assign pages = site.html_pages | where:"layout","page" | where_exp:"page","page.sitemap != false" %}
+  {% if pages.size > 0 %}
+    <h2 class="hr">{{ strings.pages | default:"Pages" }}</h2>
+    <ul class="related-posts">
+      {% for page in pages limit:5 %}
+        {% if page.layout == 'page' %}
+          <li class="h4">
+            <a href="{{ page.url | relative_url }}" class="flip-title">
+              <span>{{ page.title }}</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>
