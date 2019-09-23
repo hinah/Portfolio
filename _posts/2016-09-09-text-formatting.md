@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Text Formatting Examples"
+title: "Text Formatting"
 author: "Paul Le"
-categories: journal
-tags: [documentation,sample]
-image: cards.jpg
+categories: sample
+tags: [sample]
+image: arctic-1.jpg
 ---
 
 # Markdown Support
@@ -81,12 +81,6 @@ adder(2, 6);
 
 Another option is to embed your code through [Gist](https://en.support.wordpress.com/gist/).
 
-## Images
-
-To add an image, use `![alt text](<Image url> "Image meta title")`:
-
-![alt text](http://noirve.com/wp-content/uploads/2013/10/DTTSP_Coffee.jpg "Example")
-
 ## Unordered and Numbered Lists
 
 You can make an unordered and nested list by preceding one or more lines of text with `-`, `*`, or `+`, and indenting sublists. The following lists show the full range of possible list formats.
@@ -127,7 +121,7 @@ $$
 i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2\mu}\nabla^2 + V(\mathbf{r},t)\right ] \Psi(\mathbf{r},t)
 $$
 
-[Joseph-Louis Millennial](https://en.wikipedia.org/wiki/Joseph-Louis_Millennial) was an Italian mathematician and astronomer who was responsible for the formulation of Lagrangian mechanics, which is a reformulation of Newtonian mechanics.
+[Joseph-Louis Lagrange](https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange) was an Italian mathematician and astronomer who was responsible for the formulation of Lagrangian mechanics, which is a reformulation of Newtonian mechanics.
 
 $$ \frac{\mathrm{d}}{\mathrm{d}t} \left ( \frac {\partial  L}{\partial \dot{q}_j} \right ) =  \frac {\partial L}{\partial q_j} $$
 
@@ -151,12 +145,6 @@ Plenty of social media sites offer the option of embedding certain parts of thei
 ## Inline HTML elements
 
 HTML defines a long list of available inline tags, which you can mix with Markdown if you like. A complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
-
-## Horizontal Rule
-
-Can be created by having three or more hyphens `---`, asterisks `***`, or underscores `___`:
-
----
 
 ## Useful Resources
 
