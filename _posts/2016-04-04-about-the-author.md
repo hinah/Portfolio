@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "About the Author"
-author: "Paul Le"
+title: "About the designer"
+author: "Hina H"
 categories: facts
 tags: [sample]
 image: Me.jpg
